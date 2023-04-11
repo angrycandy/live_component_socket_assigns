@@ -6,6 +6,7 @@ defmodule MyAppWeb.ThingLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
+    dbg(socket.assigns.current_user.id)
     {:ok, stream(socket, :things, Things.list_things())}
   end
 
@@ -21,6 +22,8 @@ defmodule MyAppWeb.ThingLive.Index do
   end
 
   defp apply_action(socket, :new, _params) do
+    dbg(socket.assigns.current_user.id)
+
     socket
     |> assign(:page_title, "New Thing")
     |> assign(:thing, %Thing{})

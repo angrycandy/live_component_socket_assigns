@@ -68,6 +68,8 @@ defmodule MyAppWeb.ThingLive.FormComponent do
   end
 
   defp save_thing(socket, :new, thing_params) do
+    dbg(Map.get(socket.assigns, :current_user))
+
     case Things.create_thing(thing_params) do
       {:ok, thing} ->
         notify_parent({:saved, thing})
