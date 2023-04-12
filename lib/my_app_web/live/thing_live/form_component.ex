@@ -68,7 +68,7 @@ defmodule MyAppWeb.ThingLive.FormComponent do
   end
 
   defp save_thing(socket, :new, thing_params) do
-    dbg(Map.get(socket.assigns, :current_user))
+    dbg(socket.assigns.user_id)
 
     case Things.create_thing(thing_params) do
       {:ok, thing} ->
