@@ -1,5 +1,13 @@
 # MyApp
 
+This repo shows the solution for
+[Current_user present in socket.assigns for LiveView page load but not for form submission](https://elixirforum.com/t/current-user-present-in-socket-assigns-for-liveview-page-load-but-not-for-form-submission/54282).
+
+See the repo commits for the steps.
+
+The server memory cost is low for doing it this way according to
+[Cost of stateful components](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-cost-of-stateful-components).
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
